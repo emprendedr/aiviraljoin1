@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aiviraljoin - Generate $26,265/month with Automated AI</title>
+    <style>
+        /* ===== VARIABLES AND RESET ===== */
+        :root {
+            --primary-dark: #0c1a25;
+            --primary-blue: #152639;
+            --primary-deep: #1e3a5f;
+            --accent-teal: #40e0d0;
+            --accent-gold: #FFD700;
+            --accent-green: #25D366;
+            --accent-orange: #FFA500;
+            --text-light: #ffffff;
+            --text-muted: #b0e0e6;
+            --success: #98fb98;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-blue), var(--primary-deep));
+            color: var(--text-light);
+            line-height: 1.7;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+        
+        /* ===== FLOATING WHATSAPP BUTTON ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--accent-green), #128C7E);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
+        }
+        
+        .whatsapp-notification {
+            background: #FF4757;
+            color: white;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 20px;
+            animation: blink 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        /* ===== SECTION 1: POWERFUL HOOK ===== */
+        .hero-section {
+            text-align: center;
+            padding: 5rem 1rem;
+            background: linear-gradient(135deg, rgba(30, 58, 95, 0.9), rgba(15, 32, 39, 0.9));
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid rgba(64, 224, 208, 0.3);
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%2340e0d0" opacity="0.1" d="M0,0 L100,0 L100,100 Z"/></svg>');
+            background-size: cover;
+        }
+        
+        .main-title {
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-teal);
+            text-shadow: 0 0 15px rgba(64, 224, 208, 0.5);
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.8rem;
+            color: #7fffd4;
+            margin-bottom: 1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+        
+        .hero-highlight {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 165, 0, 0.2));
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 2rem auto;
+            max-width: 600px;
+            border-left: 4px solid var(--accent-gold);
+            animation: fadeIn 1s ease 0.6s both;
+        }
+        
+        /* ===== INTRO VIDEO SECTION ===== */
+        .video-section {
+            margin: 3rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--accent-teal);
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-teal), transparent);
+        }
+        
+        .video-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* ===== SECTION 2: PAINS/PROBLEMS ===== */
+        .pain-section {
+            background: linear-gradient(135deg, rgba(220, 20, 60, 0.15), rgba(255, 69, 0, 0.15));
+            border-left: 6px solid #DC143C;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            border-radius: 15px;
+            animation: fadeIn 1s ease both;
+        }
+        
+        .pain-title {
+            color: #FF6B6B;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .pain-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(255, 107, 107, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .pain-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 107, 107, 0.1);
+        }
+        
+        /* ===== SECTION 3: EMILY SOLUTION ===== */
+        .solution-section {
+            background: linear-gradient(135deg, rgba(64, 224, 208, 0.15), rgba(37, 211, 102, 0.15));
+            border-left: 6px solid var(--accent-teal);
+            padding: 2.5rem;
+            margin: 3rem 0;
+            border-radius: 15px;
+        }
+        
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .solution-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(64, 224, 208, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-5px);
+            background: rgba(64, 224, 208, 0.1);
+            box-shadow: 0 10px 20px rgba(64, 224, 208, 0.2);
+        }
+        
+        /* ===== DETAILED MONTHLY PAYMENT PLAN ===== */
+        .payment-plan-section {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 165, 0, 0.15));
+            border-left: 6px solid var(--accent-orange);
+            padding: 2.5rem;
+            margin: 3rem 0;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .payment-plan-title {
+            color: var(--accent-gold);
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .weekly-progression {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .week-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 2px solid rgba(255, 193, 7, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .week-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 193, 7, 0.1);
+        }
+        
+        .week-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .week-number {
+            background: var(--accent-orange);
+            color: var(--primary-dark);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .week-income {
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        
+        .monthly-summary {
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+            border: 2px solid var(--accent-gold);
+        }
+        
+        .monthly-total {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            font-weight: bold;
+            margin: 0.5rem 0;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+        
+        .level8-section {
+            background: linear-gradient(135deg, rgba(64, 224, 208, 0.15), rgba(37, 211, 102, 0.15));
+            border-left: 6px solid var(--accent-teal);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+        }
+        
+        .final-total {
+            background: linear-gradient(135deg, var(--accent-teal), #7fffd4);
+            color: var(--primary-dark);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 2rem;
+            box-shadow: 0 10px 20px rgba(64, 224, 208, 0.3);
+        }
+        
+        .final-total-amount {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin: 1rem 0;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* ===== FAQ SECTION ===== */
+        .faq-section {
+            background: linear-gradient(135deg, rgba(147, 112, 219, 0.1), rgba(186, 85, 211, 0.1));
+            border-left: 6px solid #9370DB;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            border-radius: 15px;
+        }
+        
+        .faq-link-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #9370DB, #BA55D3);
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 1rem 2.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-link-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(147, 112, 219, 0.5);
+        }
+        
+        /* ===== FINAL CTA ===== */
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-deep), #2c5364);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid rgba(127, 255, 212, 0.3);
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #7fffd4;
+            text-shadow: 0 0 10px rgba(127, 255, 212, 0.3);
+        }
+        
+        .register-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold));
+            color: var(--primary-dark);
+            font-weight: bold;
+            font-size: 1.4rem;
+            padding: 1.3rem 4rem;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 1.5rem 0;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(255, 165, 0, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .register-button::before {
+            content: '🚀';
+            margin-right: 10px;
+        }
+        
+        .register-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 12px 25px rgba(255, 165, 0, 0.6);
+        }
+        
+        /* ===== FOOTER ===== */
+        footer {
+            background: linear-gradient(180deg, #0a1929 0%, #0f2027 100%);
+            color: #e3f2fd;
+            margin-top: 4rem;
+            padding: 3rem 0 1.5rem;
+            border-top: 1px solid rgba(64, 224, 208, 0.2);
+            font-size: 0.9rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .footer-brand {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .contact-info {
+            background: rgba(10, 25, 47, 0.5);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            border: 1px solid rgba(64, 224, 208, 0.2);
+        }
+        
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .container { padding: 1rem; }
+            .main-title { font-size: 2.2rem; }
+            .hero-subtitle { font-size: 1.2rem; }
+            .section-title { font-size: 1.8rem; }
+            .hero-section, .pain-section, .solution-section, 
+            .payment-plan-section, .faq-section, .cta-section { 
+                padding: 2rem 1rem; 
+                margin: 2rem 0;
+            }
+            .register-button, .faq-link-button {
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+                width: 90%;
+                display: block;
+                margin: 1rem auto;
+            }
+            .whatsapp-btn {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+            .pain-grid, .solution-grid, .weekly-progression {
+                grid-template-columns: 1fr;
+            }
+            .final-total-amount { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating WhatsApp Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.link/90fshw" target="_blank" class="whatsapp-btn">
+            <span>Need help taking the first step?</span>
+            <span class="whatsapp-notification">1 pending message</span>
+        </a>
+    </div>
+
+    <div class="container">
+        <!-- SECTION 1: POWERFUL HOOK -->
+        <section class="hero-section">
+            <h1 class="main-title">🚀 TIRED OF WORKING HARD WITHOUT SEEING RESULTS?</h1>
+            <p class="hero-subtitle">Artificial intelligence can build your business while you sleep</p>
+            <p class="hero-subtitle">Discover how 5 minutes a day can generate residual income for life</p>
+            
+            <div class="hero-highlight">
+                <p style="font-size: 1.3rem; color: var(--accent-gold); margin-bottom: 0.5rem;">
+                    <strong>💰 EARN $26,265 MONTHLY WITH A 100% AUTOMATED SYSTEM</strong>
+                </p>
+                <p style="color: var(--text-muted);">
+                    You only need 3 people to activate a system that works 24/7 for you
+                </p>
+            </div>
+        </section>
+
+        <!-- INTRODUCTORY VIDEO -->
+        <section class="video-section">
+            <h2 class="section-title">🎬 WATCH THIS 3-MINUTE VIDEO</h2>
+            <div class="video-wrapper">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px;">
+                    <iframe src="https://www.youtube.com/embed/gqzzD_B-pV8"
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                            title="Presentation - AI for Residual Income"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: PAINS/PROBLEMS -->
+        <section class="pain-section">
+            <h2 class="pain-title">😫 DO THESE PROBLEMS SOUND FAMILIAR?</h2>
+            
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <h3 style="color: #FFD166;">⏰ WASTED TIME</h3>
+                    <p>You invest hours on social media without seeing real conversions</p>
+                </div>
+                <div class="pain-card">
+                    <h3 style="color: #FFD166;">💸 STAGNANT MONEY</h3>
+                    <p>You spend on advertising without measurable return on investment</p>
+                </div>
+                <div class="pain-card">
+                    <h3 style="color: #FFD166;">😓 CONSTANT FRUSTRATION</h3>
+                    <p>Prospects say "yes" but never take action</p>
+                </div>
+                <div class="pain-card">
+                    <h3 style="color: #FFD166;">🔁 VICIOUS CYCLE</h3>
+                    <p>You work a lot to earn little, month after month</p>
+                </div>
+            </div>
+
+            <p style="text-align: center; font-size: 1.2rem; color: #FFEAA7; margin-top: 1.5rem;">
+                <strong>You're not alone:</strong> 97% of entrepreneurs fail because they try to do everything manually
+            </p>
+        </section>
+
+        <!-- COMPLETE SYSTEM VIDEO -->
+        <section class="video-section">
+            <h2 class="section-title">🤖 MEET EMILY - YOUR 24/7 AI ASSISTANT</h2>
+            <div class="video-wrapper">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px;">
+                    <iframe src="https://www.youtube.com/embed/I3k7kUsa40k"
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                            title="Complete Solution - Automated System"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: EMILY SOLUTION -->
+        <section class="solution-section">
+            <h2 class="section-title">✨ WHAT EMILY WILL DO FOR YOU</h2>
+            
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <h3 style="color: var(--accent-teal);">🧠 EXPLAINS IN SIMPLE TERMS</h3>
+                    <p>Explains the viral downline with AI in clear and easy-to-understand language</p>
+                </div>
+                <div class="solution-card">
+                    <h3 style="color: var(--accent-teal);">📊 BREAKS DOWN THE 3×8 MATRIX</h3>
+                    <p>Breaks down the compensation structure so prospects understand it instantly</p>
+                </div>
+                <div class="solution-card">
+                    <h3 style="color: var(--accent-teal);">🛡️ OVERCOMES OBJECTIONS</h3>
+                    <p>Anticipates and responds to common doubts before people even ask</p>
+                </div>
+                <div class="solution-card">
+                    <h3 style="color: var(--accent-teal);">🤖 GUIDES AUTOMATIC REGISTRATION</h3>
+                    <p>Guides prospects step by step to join your team automatically</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DETAILED MONTHLY PAYMENT PLAN -->
+        <section class="payment-plan-section">
+            <h2 class="payment-plan-title">💰 MONTHLY PAYMENT PLAN - REAL PROJECTION</h2>
+            <p style="text-align: center; color: #FFEAA7; margin-bottom: 2rem;">
+                <strong>Base: 3 initial direct referrals + automatic weekly duplication</strong>
+            </p>
+
+            <!-- Weekly Progression -->
+            <div class="weekly-progression">
+                <!-- Week 1 -->
+                <div class="week-card">
+                    <div class="week-header">
+                        <div class="week-number">WEEK 1</div>
+                        <div class="week-income">$30</div>
+                    </div>
+                    <div class="week-details">
+                        <p><strong>✨ What you achieve:</strong> 3 personal direct referrals</p>
+                        <p><strong>📊 Calculation:</strong> $10 × 3 people = $30</p>
+                        <p><strong>✅ Result:</strong> Your membership already paid for itself</p>
+                    </div>
+                </div>
+
+                <!-- Week 2 -->
+                <div class="week-card">
+                    <div class="week-header">
+                        <div class="week-number">WEEK 2</div>
+                        <div class="week-income">$18</div>
+                    </div>
+                    <div class="week-details">
+                        <p><strong>✨ What you achieve:</strong> The 3 people invite 3 each</p>
+                        <p><strong>📊 Calculation:</strong> $2 × 9 people = $18</p>
+                    </div>
+                </div>
+
+                <!-- Week 3 -->
+                <div class="week-card">
+                    <div class="week-header">
+                        <div class="week-number">WEEK 3</div>
+                        <div class="week-income">$54</div>
+                    </div>
+                    <div class="week-details">
+                        <p><strong>✨ What you achieve:</strong> Duplication of the previous level</p>
+                        <p><strong>📊 Calculation:</strong> $2 × 27 people = $54</p>
+                    </div>
+                </div>
+
+                <!-- Week 4 -->
+                <div class="week-card">
+                    <div class="week-header">
+                        <div class="week-number">WEEK 4</div>
+                        <div class="week-income">$162</div>
+                    </div>
+                    <div class="week-details">
+                        <p><strong>✨ What you achieve:</strong> Exponentiality in action</p>
+                        <p><strong>📊 Calculation:</strong> $2 × 81 people = $162</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weekly Continuation -->
+            <div class="weekly-progression">
+                <!-- Week 5 -->
+                <div class="week-card">
+                    <div class="week-header">
+                        <div class="week-number">WEEK 5</div>
+                        <div class="week-income">$486</div>
+                    </div>
+                    <div class="week-details">
+                        <p><strong>📊 Calculation:</strong> $2 × 243 people = $486</p>
+                    </div>
+                </div>
+
+                <!-- Week 6 -->
+                <div class="week-card">
+                    <div class="week-header">
+                        <div class="week-number">WEEK 6</div>
+                        <div class="week-income">$1,458</div>
+                    </div>
+                    <div class="week-details">
+                        <p><strong>📊 Calculation:</strong> $2 × 729 people = $1,458</p>
+                    </div>
+                </div>
+
+                <!-- Week 7 -->
+                <div class="week-card">
+                    <div class="week-header">
+                        <div class="week-number">WEEK 7</div>
+                        <div class="week-income">$4,374</div>
+                    </div>
+                    <div class="week-details">
+                        <p><strong>📊 Calculation:</strong> $2 × 2,187 people = $4,374</p>
+                        <p><strong>🎯 Levels 1-7 complete</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Monthly Summary -->
+            <div class="monthly-summary">
+                <h3>📅 TOTAL FIRST MONTH (Levels 1-7)</h3>
+                <div class="monthly-total">$6,582 / month</div>
+                <p>✅ <strong>Achievement:</strong> Complete matrix without additional personal referrals</p>
+                <p>✨ <strong>Advantage:</strong> Guaranteed residual income</p>
+            </div>
+
+            <!-- Level 8 Special -->
+            <div class="level8-section">
+                <h3 style="color: var(--accent-teal); text-align: center; margin-bottom: 1rem;">
+                    🚀 LEVEL 8 - SPECIAL BONUS
+                </h3>
+                
+                <div style="background: rgba(64, 224, 208, 0.1); padding: 1rem; border-radius: 8px; text-align: center; margin: 1rem 0; border: 1px solid rgba(64, 224, 208, 0.3);">
+                    <p><strong>🎯 Single requirement:</strong> For the system to generate you 3 additional personal direct referrals</p>
+                    <p><em>(Happens automatically when your network grows)</em></p>
+                </div>
+
+                <div class="week-card" style="max-width: 500px; margin: 0 auto;">
+                    <div class="week-header">
+                        <div class="week-number">WEEK 8+</div>
+                        <div class="week-income">$19,683</div>
+                    </div>
+                    <div class="week-details">
+                        <p><strong>📊 Calculation:</strong> $3 × 6,561 people = $19,683</p>
+                        <p><strong>🎖️ Level 8 automatically activated</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Impressive Final Total -->
+            <div class="final-total">
+                <div style="font-size: 1.8rem; font-weight: bold; margin-bottom: 0.5rem;">
+                    🏆 TOTAL MONTHLY INCOME WITH COMPLETE MATRIX
+                </div>
+                <div class="final-total-amount">$26,265 / MONTH</div>
+                <p>✨ <strong>Breakdown:</strong> $6,582 (Levels 1-7) + $19,683 (Level 8) = $26,265</p>
+                <p>🚀 <strong>100% automated system working for you 24/7</strong></p>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section class="faq-section">
+            <h2 class="section-title">❓ HAVE MORE QUESTIONS?</h2>
+            <p style="text-align: center; font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                Check out our complete Frequently Asked Questions section
+            </p>
+            
+            <div style="text-align: center;">
+                <a href="https://qnaviraldownline.vercel.app/" class="faq-link-button" target="_blank">
+                    📚 GO TO FREQUENTLY ASKED QUESTIONS (FAQ)
+                </a>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                    <em>You will be directed to our official FAQ page</em>
+                </p>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="cta-section">
+            <h2 class="cta-title">🚀 YOUR LIFE CHANGES TODAY OR NEVER</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem; color: var(--text-muted); max-width: 700px; margin-left: auto; margin-right: auto;">
+                It's not another empty promise. It's a proven system that's generating real results right now
+            </p>
+            
+            <div style="max-width: 600px; margin: 2rem auto; background: rgba(255, 255, 255, 0.05); padding: 1.5rem; border-radius: 10px;">
+                <h3 style="color: #7fffd4; margin-bottom: 1rem; text-align: center;">✅ WHAT YOU GET IMMEDIATELY:</h3>
+                <ul style="text-align: left; color: var(--text-muted); line-height: 1.8; padding-left: 1.5rem;">
+                    <li><strong>Immediate access</strong> to Emily, your 24/7 AI assistant</li>
+                    <li><strong>7-day FREE trial</strong> - No credit card required</li>
+                    <li><strong>Automatic positioning</strong> in the 3×8 matrix from day 1</li>
+                    <li><strong>Complete training</strong> on how to maximize the system</li>
+                    <li><strong>Personalized support</strong> for your first weeks</li>
+                </ul>
+            </div>
+
+            <a href="https://aiviraldownline.com/lc.php?id=Jobshndez" class="register-button" target="_blank">
+                I WANT MY FREE TRIAL!
+            </a>
+            
+            <p style="color: var(--success); font-style: italic; margin-top: 1rem; font-size: 1.2rem;">
+                🎯 No risk • No commitment • No excuses
+            </p>
+            <p style="color: #87ceeb; margin-top: 1rem;">
+                <small id="counterText">Join the 2,300+ people who have already activated their automated system</small>
+            </p>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3 style="color: var(--accent-teal); font-size: 2rem; margin-bottom: 0.5rem;">aiviraljoin</h3>
+                <p>Automate your growth with AI • © 2025 All rights reserved</p>
+            </div>
+
+            <div class="footer-links">
+                <div>
+                    <h4 style="color: #64ffda; margin-bottom: 1rem;">Resources</h4>
+                    <a href="https://qnaviraldownline.vercel.app/" target="_blank" style="color: #bbdefb; text-decoration: none; display: block; margin-bottom: 0.8rem;">
+                        📚 Frequently Asked Questions
+                    </a>
+                </div>
+                
+                <div>
+                    <h4 style="color: #64ffda; margin-bottom: 1rem;">Contact</h4>
+                    <div class="contact-info">
+                        <h4 style="color: #64ffda; margin-bottom: 1rem;">Have questions before starting?</h4>
+                        <div style="margin: 1rem 0;">
+                            <div style="margin-bottom: 0.5rem;">
+                                <span>📧</span>
+                                <a href="mailto:jobshndez@gmail.com" style="color: var(--accent-teal); text-decoration: none; margin-left: 0.5rem;">
+                                    jobshendez@gmail.com
+                                </a>
+                            </div>
+                            <div>
+                                <span>📞</span>
+                                <span style="color: #bbdefb; margin-left: 0.5rem;">(323) 285-0508</span>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.9rem; color: #90caf9; margin-top: 1rem;">
+                            We respond in less than 24 hours
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.05); color: #90a4ae; font-size: 0.85rem;">
+                <p>This site is a personal automation tool. Individual results may vary.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.8rem;">v3.0 • Complete Persuasive Structure</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animations and interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animated counter
+            const counterElement = document.getElementById('counterText');
+            if (counterElement) {
+                let count = 2300;
+                const target = 2347;
+                const interval = setInterval(() => {
+                    count++;
+                    counterElement.textContent = `Join the ${count.toLocaleString()}+ people who have already activated their automated system`;
+                    if (count >= target) clearInterval(interval);
+                }, 50);
+            }
+
+            // Scroll appearance effect
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Apply to all main sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+
+            // Highlight the final total
+            const finalTotal = document.querySelector('.final-total-amount');
+            if (finalTotal) {
+                setTimeout(() => {
+                    finalTotal.style.transition = 'transform 0.5s ease, color 0.5s ease';
+                    finalTotal.style.transform = 'scale(1.1)';
+                    finalTotal.style.color = '#0c1a25';
+                    
+                    setTimeout(() => {
+                        finalTotal.style.transform = 'scale(1)';
+                    }, 500);
+                }, 1500);
+            }
+
+            // Counter for the monthly total
+            const monthlyTotal = document.querySelector('.monthly-total');
+            if (monthlyTotal) {
+                let count = 0;
+                const target = 6582;
+                const increment = Math.ceil(target / 50);
+                const counterInterval = setInterval(() => {
+                    count += increment;
+                    if (count >= target) {
+                        count = target;
+                        clearInterval(counterInterval);
+                    }
+                    monthlyTotal.textContent = `$${count.toLocaleString()} / month`;
+                }, 30);
+            }
+        });
+
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId !== '#') {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
